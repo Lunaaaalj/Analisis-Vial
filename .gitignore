@@ -1,0 +1,7 @@
+.venv/
+venv/
+
+.vscode/
+.idea/
+
+.ds_store
