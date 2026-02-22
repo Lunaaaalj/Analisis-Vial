@@ -1,4 +1,4 @@
-# Contributing to Optimizacion-de-recursos
+# Contributing to Analisis-Vial
 
 ## Table of Contents
 
@@ -15,8 +15,8 @@
 
 1. **Clone the repository** locally:
    ```bash
-   git clone https://github.com/Lunaaaalj/Optimizacion-de-recursos.git
-   cd Optimizacion-de-recursos
+   git clone https://github.com/Lunaaaalj/Analisis-Vial.git
+   cd Analisis-Vial
    ```
 2. **Create your virtual environment and activate it**
    ```bash
@@ -90,7 +90,7 @@ git rebase origin/main
 git push origin feature/your-feature-name
 ```
 
-**Immediately after your first push**, open a [Draft Pull Request](https://github.com/Lunaaaalj/Optimizacion-de-recursos/compare) against `main`. This signals that work is in progress, allows early visibility, and triggers CI checks while you continue developing.
+**Immediately after your first push**, open a [Draft Pull Request](https://github.com/Lunaaaalj/Analisis-Vial/compare) against `main`. This signals that work is in progress, allows early visibility, and triggers CI checks while you continue developing.
 
 - Go to the repository and click **"Compare & pull request"**
 - Select **"Create draft pull request"** (not "Ready for review")
@@ -129,7 +129,7 @@ Choose the appropriate strategy based on your PR:
 
 ### Opening a Pull Request
 
-1. Go to the [repository](https://github.com/Lunaaaalj/Optimizacion-de-recursos)
+1. Go to the [repository](https://github.com/Lunaaaalj/Analisis-Vial)
 2. Click "New Pull Request"
 3. Select your feature branch
 4. Fill out the PR template with:
@@ -177,7 +177,7 @@ Once your PR is approved:
 ## Project Structure
 
 ```
-Optimizacion-de-recursos/
+Analisis-Vial/
 ├── .github/          # GitHub configuration and workflows
 ├── bibliographies/   # Bibliography files
 ├── data/            # Data files
