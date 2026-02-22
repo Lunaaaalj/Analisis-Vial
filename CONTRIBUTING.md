@@ -157,7 +157,7 @@ Once your PR is approved:
 
 ### Python Code
 
-- Follow [PEP 8](https://pep8.org/) style guide
+- Follow [PEP 8](https://peps.python.org/pep-0008/) style guide
 - Use meaningful variable and function names
 - Add docstrings to functions and classes
 - Keep functions small and focused
