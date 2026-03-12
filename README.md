@@ -11,6 +11,16 @@ El proyecto tiene dos versiones de simulación:
 - **Cruce Básico** — Intersección sin semáforos. Modela llegadas de vehículos con distribución de Poisson, geometría real del cruce con splines cúbicos, y detección de colisiones con polígonos cápsula.
 - **Cruce Semafórico v1** — Agrega control de semáforo de 4 fases con tiempos configurables. Incluye recolección de métricas: throughput, longitudes de cola, tiempos de espera y eficiencia por fase.
 
+## Visualizaciones
+
+### Simulación animada
+
+![Simulación del cruce semafórico](assets/simulacion_cruce.gif)
+
+### Dashboard de estadísticas
+
+![Dashboard de estadísticas de la simulación](assets/traffic_stats_dashboard.png)
+
 ## Estructura
 
 ```
