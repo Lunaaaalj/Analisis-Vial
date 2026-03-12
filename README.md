@@ -1,70 +1,48 @@
-# DS-Template
-Template repository for data science projects
+# Análisis Vial — Simulación de Cruce Intersección 03
 
-## Project Structure
+Simulación multiagente del cruce vial **Av. Fernando García Roel / Ahuehuetes / Nogales** (Intersección 03, Monterrey). El proyecto modela el flujo vehicular y el control semafórico usando programación orientada a agentes con datos de campo reales.
 
-This template provides a standardized directory structure for data science projects, promoting organization, reproducibility, and collaboration.
+## Descripción
+
+La intersección modelada tiene forma de Y: una vía diagonal (Fernando García Roel) que se bifurca en dos ramales (Ahuehuetes al NW y Nogales al NE). Los accesos modelados son W, E, NW y NE.
+
+El proyecto tiene dos versiones de simulación:
+
+- **Cruce Básico** — Intersección sin semáforos. Modela llegadas de vehículos con distribución de Poisson, geometría real del cruce con splines cúbicos, y detección de colisiones con polígonos cápsula.
+- **Cruce Semafórico v1** — Agrega control de semáforo de 4 fases con tiempos configurables. Incluye recolección de métricas: throughput, longitudes de cola, tiempos de espera y eficiencia por fase.
+
+## Estructura
 
 ```
-DS-Template/
-│
-├── data/                   # Data files
-│   ├── raw/               # Original, immutable data
-│   ├── processed/         # Cleaned, transformed data
-│   └── external/          # Data from third-party sources
-│
-├── notebooks/             # Jupyter notebooks for exploration
-│
-├── src/                   # Source code for the project
-│
-├── models/                # Trained models and model artifacts
-│
-├── reports/               # Generated analysis and reports
-│   └── figures/          # Graphics and figures for reports
-│
-├── references/            # Reference materials and documentation
-│
-├── tests/                 # Unit tests and integration tests
-│
-├── docs/                  # Project documentation
-│
-├── .gitignore            # Files and directories to ignore in git
-└── README.md             # This file
+analisis-vial/
+├── data/raw/          # Aforos vehiculares reales (mañana, mediodía, tarde)
+├── docs/              # Croquis de la intersección (PDF y DOCX)
+├── notebooks/         # Simulaciones en Jupyter
+├── src/               # Código fuente (en desarrollo)
+└── tests/             # Pruebas (en desarrollo)
 ```
 
-## Getting Started
+## Requisitos
 
-1. Clone this repository as a template for your new data science project
-2. Update this README with your project-specific information
-3. Install required dependencies (add a requirements.txt or environment.yml file)
-4. Start working in the `notebooks/` directory for exploration
-5. Refactor reusable code into the `src/` directory
-6. Write tests in the `tests/` directory
-7. Document your work in the `docs/` directory
+```bash
+pip install agentpy numpy scipy matplotlib seaborn pandas networkx
+```
 
-## Directory Descriptions
+## Uso
 
-- **data/**: Store all data files. Keep raw data immutable and document transformations.
-- **notebooks/**: Jupyter notebooks for exploration, experimentation, and initial analysis.
-- **src/**: Reusable Python modules and production-ready code.
-- **models/**: Trained machine learning models and model metadata.
-- **reports/**: Generated reports, presentations, and visualizations.
-- **references/**: Papers, manuals, and other reference materials.
-- **tests/**: Unit tests and integration tests for code quality.
-- **docs/**: Comprehensive project documentation.
+```bash
+source venv/bin/activate
+jupyter notebook notebooks/
+```
 
-## Best Practices
+Abrir el notebook correspondiente:
+- `Tarea_Cruce_Basico_CORREGIDO.ipynb` — modelo sin semáforo
+- `Cruce_Semafórico_Version_1.ipynb` — modelo con control semafórico
 
-- Keep raw data immutable in `data/raw/`
-- Write clean, documented, and tested code
-- Use version control for code, not for large data files or models
-- Document your process and findings
-- Follow the principle of reproducibility
+## Datos
 
-## Contributing
+`data/raw/` contiene aforos vehiculares de la Intersección 03 en tres periodos del día (Excel). Estos datos empíricos se usan para calibrar y validar las tasas de llegada del modelo.
 
-When contributing to this project, please:
-1. Follow the existing code style and structure
-2. Write tests for new functionality
-3. Update documentation as needed
-4. Keep notebooks clean and well-documented
+## Contribución
+
+Ver [CONTRIBUTING.md](CONTRIBUTING.md) para el flujo de trabajo con Git, convenciones de commits y proceso de pull requests.
